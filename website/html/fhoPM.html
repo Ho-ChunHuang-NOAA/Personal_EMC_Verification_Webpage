@@ -1,0 +1,162 @@
+
+<html>
+<head>
+<title> NCEP Air Quality Forecast(AQF) Verification. NOAA/NWS/NCEP/EMC </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../js/style.css"></link>
+<script language="JavaScript" src="../js/fvs.js"> </script> 
+<script language="JavaScript">
+<!--
+
+//-->
+
+</script>
+</head>
+                                                                                                                  
+<body  border=0 bgcolor="addbff"  text="000000" onLoad="javascript:load_image(document.form1)" >
+
+<img src="../js/noaa_logo.gif" height=60 width=65><img src="../js/nws_logo.gif" height=60 width=65><img src="../js/ncep_80.gif" height=55 width=75> 
+<font color="Blue" size=+3>   &nbsp &nbsp &nbsp NCEP Air Quality Forecast FHO Verification </font>
+ 
+
+
+<table bgcolor="AAAAAA" align="left">
+
+<form name="form1">
+
+
+<tr bgcolor="AAAAAA">
+<td colspan=3></td>
+<td rowspan=30>
+     <img src="../../current/PM25-MXSFC_hitFHO48_AQMCS.gif" name="my_image" >
+</td>
+</tr>
+<tr="DDDDDD"><td colspan=3><center><a href="http://www.weather.gov/ost/air_quality/"> NWS/OST AQF Page </a><br>
+<center><a href="http://www.emc.ncep.noaa.gov/mmb/aq/"> AQF forecasts/information </a><br>
+<center><a href="http://www.emc.ncep.noaa.gov/mmb/aq/cmaq/web/html"> CMAQ Regional Graphics </a><br>
+</td></tr>
+
+
+
+<tr bgcolor="AAAAAA"><td>&nbsp</td> </tr>
+
+<tr bgcolor="CCCCCC"><td><center> Change FVS type:<br>
+<select name="typ" onchange="location=this.form.typ.options[this.form.typ.selectedIndex].value">
+<option value="fhoPM.html" selected > Threshold PM verification statistics
+<option value="regularPM.html" > Standard PM verification statistics 
+<option value="fho.html" > Threshold O3 verification statistics
+<option value="regular.html" > Standard O3 verification statistics 
+<option value="fhoAOD.html"  > Threshold AOD verification statistics
+</select>
+</td></tr>
+
+
+<tr bgcolor="CCCCCC"> <td><center>Select fields/species:
+<select name="fld" >
+<option value="PM25-MX" selected> PM25 1hr ave Daily Max
+<option value="PM25-24" > PM25 24h avg (4-4 UTC)
+<option value="AOD" > AOD
+</select>
+</td></tr>
+
+
+<tr bgcolor="CCCCCC"> <td><center>Select Level
+<select name="plvl" >
+<option value="SFC" selected> Surface
+<option value="ATMOS" > Atmospheric layer
+</select>
+</td></tr> 
+
+
+<tr bgcolor="CCCCCC"> <td><center>Select Year:
+<select name="yr" >
+<option value="21"  > 2021
+<option value="20"  > 2020
+<option value="19"  > 2019
+<option value="18"  > 2018
+<option value="17"  > 2017
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC"> <td><center>Select time:
+<select name="tim" >
+<option value="current"  > Current   &nbsp &nbsp
+<option value="jan" > January
+<option value="feb" > February
+<option value="mar" > March
+<option value="apr" > April
+<option value="aprcor" > April full obs
+<option value="may" > May
+<option value="jun" > June
+<option value="jul" > July
+<option value="aug" > August
+<option value="sep" > September
+<option value="oct" > October
+<option value="nov" > November
+<option value="dec" > December
+<option value="summer13"> Summer 2013 
+<option value="summer12"> Summer 2012 
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC"> <td><center>Select region:<br>
+<select name="reg" >
+<option value="_AQMCS" selected > Whole domain
+<option value="_AQMES"   > Eastern U.S.
+<option value="_AQMWS"   > Western U.S.
+<option value="_AQMNEC"   > NE Coast
+<option value="_AQMSEC"   > SE Coast
+<option value="_AQMMDW"   > Mid west
+<option value="_AQMLMV"   > Lower Miss-valley
+<option value="_AQMNPL"   > Northern Plains
+<option value="_AQMNWC"   > Northwest Coast
+<option value="_AQMSWC"   > Southwest Coast
+<option value="_AQMPARAALL" > All regions PARA
+<option value="_AQMBIASALL" > All regions BIAS Corrected
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC"><td><center><center> Select forecast four:<br>
+<select name="fhr" >
+<option value="FHO48"  > Day 2 daily max for all thresholds 
+<option value="GT1248" > Day 2 daily max time series for exceedences GT 12 ug/m3
+<option value="FHO24"  > Day 1 daily max for all thresholds 
+<option value="GT1224" > Day 1 daily max time series for exceedences GT 12 ug/m3
+
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC"><td><center> Select statistic type:<br>
+<select name="sts" > 
+<option value="_csi" selected > Critical Success Index 
+<option value="_ets" > Equitable Threat Score 
+<option value="_hit" > Hit rate 
+<option value="_pod" > POD
+<option value="_far" > FAR 
+<option value="_bias" > Skill Score Bias
+</select>
+</td></tr>
+
+<tr bgcolor="CCCCCC"><td>&nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp <br>
+&nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp<input size=10 type="button" name="submit" value="Get map" onClick="load_image(this.form)"></td></tr>
+
+<tr bgcolor="AAAAAA"><td>&nbsp<td></tr>
+<tr bgcolor="AAAAAA"><td>&nbsp<td></tr>
+<tr bgcolor="AAAAAA"><td>&nbsp<td></tr>
+<tr bgcolor="AAAAAA"><td>&nbsp<td></tr>
+<tr bgcolor="AAAAAA"><td><center><font size=+2><a href=http://www.emc.ncep.noaa.gov/mmb/ylin/pcpverif/scores/regions/regions14.jpg >Verification Regions
+<tr bgcolor="AAAAAA"><td><center><font size=+2><a href=http://www.emc.ncep.noaa.gov/mmb/ylin/pcpverif/scores/docs/QandA.html#SCORETYPES > Verification score definitions
+<tr bgcolor="AAAAAA"><td><center><font size=+2><a href=mailto:marina.tsidulko@noaa.gov;Jeff.McQueen@noaa.gov>Send Comments
+<br><br>
+</td></tr>
+<tr bgcolor="AAAAAA"><td>&nbsp</td></tr>
+
+</form>
+
+</table>
+
+
+												  
+</body>
+</html>
+
